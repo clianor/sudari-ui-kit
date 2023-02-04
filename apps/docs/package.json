@@ -1,31 +1,32 @@
 {
   "name": "docs",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build",
-    "clean": "rimraf storybook-static .turbo"
+    "build": "storybook build --docs",
+    "preview": "serve storybook-static -l 6006",
+    "clean": "rimraf .turbo storybook-static"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@storybook/addon-essentials": "7.0.0-beta.40",
-    "@storybook/addon-interactions": "7.0.0-beta.40",
-    "@storybook/addon-links": "7.0.0-beta.40",
-    "@storybook/blocks": "7.0.0-beta.40",
-    "@storybook/react": "7.0.0-beta.40",
-    "@storybook/react-vite": "7.0.0-beta.40",
-    "@storybook/testing-library": "0.0.14-next.1",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "prop-types": "15.8.1",
-    "storybook": "7.0.0-beta.40",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.0"
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@storybook/addon-essentials": "^7.0.0-beta.43",
+    "@storybook/addon-interactions": "^7.0.0-beta.43",
+    "@storybook/addon-links": "^7.0.0-beta.43",
+    "@storybook/blocks": "^7.0.0-beta.43",
+    "@storybook/react": "^7.0.0-beta.43",
+    "@storybook/react-webpack5": "^7.0.0-beta.43",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^4.1.2",
+    "serve": "^14.2.0",
+    "storybook": "^7.0.0-beta.43"
   }
 }
