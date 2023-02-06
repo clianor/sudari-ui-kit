@@ -1,32 +1,48 @@
 {
   "name": "ui",
   "version": "0.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
+  "type": "module",
   "files": [
     "dist/**"
   ],
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup",
-    "check-types": "tsc --noEmit",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "pnpm run type-check -- --watch",
+    "build:types": "tsc",
+    "build:rollup": "rollup -c",
+    "build": "pnpm run build:rollup && pnpm run build:types",
+    "dev": "rollup -cw",
     "lint": "eslint *.ts*",
     "clean": "rimraf .turbo dist"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.6",
+    "babel-loader": "^9.1.2",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
+    "rollup": "^3.14.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "tsconfig": "workspace:*",
-    "tsup": "^6.5.0",
     "typescript": "^4.5.2"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.0.27",
+    "react": "^18.2.0"
   }
 }
