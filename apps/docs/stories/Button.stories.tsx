@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { within, userEvent } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
+import { within, userEvent } from "@storybook/testing-library";
 import { Button, ButtonProps } from "ui";
 
 const meta: Meta<ButtonProps> = {
@@ -28,6 +28,6 @@ Default.play = async ({ args, canvasElement }) => {
   await userEvent.click(button);
   expect(button).toHaveFocus();
 
-  userEvent.click(canvasElement);
+  await userEvent.click(canvasElement);
   expect(button).not.toHaveFocus();
 };
