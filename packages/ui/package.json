@@ -18,11 +18,13 @@
     "clean": "rimraf .turbo dist"
   },
   "devDependencies": {
+    "@emotion/cache": "^11.10.5",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "babel-loader": "^9.1.2",
+    "babel-plugin-macros": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "rollup": "^3.14.0",
@@ -40,5 +42,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./../../tailwind.config.js",
+      "preset": "emotion"
+    }
   }
 }
