@@ -20,11 +20,9 @@ export default inputSrc.map(([input, format]) => {
       exports: "auto",
       preserveModules: format === "cjs",
     },
-    external: [/@babel\/runtime/],
     plugins: [
       babel({
         extensions,
-        babelHelpers: "runtime",
         include: ["./src/**/*"],
         exclude: "node_modules/**",
       }),

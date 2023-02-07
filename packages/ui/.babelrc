@@ -9,10 +9,7 @@
     "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
-    [
-      "@babel/plugin-transform-runtime",
-      { "corejs": 2 }
-    ],
-    "@emotion/babel-plugin"
+    "@emotion/babel-plugin",
+    "babel-plugin-macros"
   ]
 }
