@@ -6,9 +6,12 @@ export interface ButtonProps
   label?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label }) => {
+export const Button: React.FC<ButtonProps> = ({ label, ...rest }) => {
   return (
-    <button tw="text-green-800 bg-green-200 px-4 py-2 hover:(text-green-900 bg-green-300)">
+    <button
+      tw="text-green-800 bg-green-200 px-4 py-2 hover:(text-green-900 bg-green-300)"
+      {...rest}
+    >
       {label}
     </button>
   );
