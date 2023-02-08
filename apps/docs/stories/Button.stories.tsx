@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect } from "@storybook/jest";
 import { within, userEvent } from "@storybook/testing-library";
-import { Button, ButtonProps } from "ui";
+import { Button } from "ui";
 
-const meta: Meta<ButtonProps> = {
+const meta = {
   title: "ui/Button",
   component: Button,
   tags: ["autodocs"],
@@ -13,21 +13,25 @@ const meta: Meta<ButtonProps> = {
   args: {
     label: "Click!",
   },
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
-Default.play = async ({ args, canvasElement }) => {
-  const canvas = within(canvasElement);
+export const Default: Story = {
+  name: "Default",
+  play: ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
 
-  const button = canvas.getByRole("button");
-  expect(button).toBeInTheDocument();
+    const button = canvas.getByRole("button");
+    expect(button).toBeInTheDocument();
 
-  await userEvent.click(button);
-  expect(button).toHaveFocus();
+    userEvent.click(button);
+    expect(button).toHaveFocus();
 
-  await userEvent.click(canvasElement);
-  expect(button).not.toHaveFocus();
+    expect(args.onClick).toHaveBeenCalledTimes(1);
+
+    userEvent.click(canvasElement);
+    expect(button).not.toHaveFocus();
+  },
 };
