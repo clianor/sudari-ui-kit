@@ -43,7 +43,7 @@ export const Default: Story = {
 export const Sizes: Story = {
   name: "Sizes",
   render: () => (
-    <div tw="grid grid-cols-3 gap-x-2">
+    <div tw="flex items-end gap-x-4">
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>
       <Button size="lg">Large</Button>
