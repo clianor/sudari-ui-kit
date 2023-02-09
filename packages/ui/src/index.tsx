@@ -1,4 +1,8 @@
-import * as React from "react";
+// components
+export * from "./components/Button";
 
-export { default as GlobalStyles } from "./GlobalStyles";
-export * from "./Button";
+// context
+export * from "./context/theme";
+
+// theme
+export * from "./theme";
