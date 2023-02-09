@@ -42,11 +42,40 @@ export const Default: Story = {
 
 export const Sizes: Story = {
   name: "Sizes",
-  render: () => (
+  render: (args) => (
     <div tw="flex items-end gap-x-4">
-      <Button size="sm">Small</Button>
-      <Button size="md">Medium</Button>
-      <Button size="lg">Large</Button>
+      <Button {...args}>Small</Button>
+      <Button {...args} size="md">
+        Medium
+      </Button>
+      <Button {...args} size="lg">
+        Large
+      </Button>
     </div>
   ),
+  argTypes: {
+    children: { table: { disable: true } },
+    size: { table: { disable: true } },
+  },
+};
+
+export const Variants: Story = {
+  name: "Variants",
+  render: (args) => (
+    <div tw="flex items-end gap-x-4">
+      <Button {...args} variant="filled">
+        Filled
+      </Button>
+      <Button {...args} variant="outlined">
+        Outlined
+      </Button>
+      <Button {...args} variant="text">
+        Text
+      </Button>
+    </div>
+  ),
+  argTypes: {
+    children: { table: { disable: true } },
+    variant: { table: { disable: true } },
+  },
 };
