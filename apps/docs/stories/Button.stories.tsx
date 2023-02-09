@@ -2,16 +2,20 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { expect } from "@storybook/jest";
 import { within, userEvent } from "@storybook/testing-library";
 import { Button } from "ui";
+import "twin.macro";
 
 const meta = {
   title: "ui/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {
+    children: { control: "text" },
     onClick: { action: true },
+    size: { control: { type: "select" }, options: ["sm", "md", "lg"] },
   },
   args: {
-    label: "Click!",
+    children: "Click!",
+    size: "md",
   },
 } satisfies Meta<typeof Button>;
 
@@ -34,4 +38,15 @@ export const Default: Story = {
     userEvent.click(canvasElement);
     expect(button).not.toHaveFocus();
   },
+};
+
+export const Sizes: Story = {
+  name: "Sizes",
+  render: () => (
+    <div tw="flex items-end gap-x-4">
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  ),
 };
