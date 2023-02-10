@@ -44,7 +44,9 @@ export const Sizes: Story = {
   name: "Sizes",
   render: (args) => (
     <div tw="flex items-end gap-x-4">
-      <Button {...args}>Small</Button>
+      <Button {...args} size="sm">
+        Small
+      </Button>
       <Button {...args} size="md">
         Medium
       </Button>
