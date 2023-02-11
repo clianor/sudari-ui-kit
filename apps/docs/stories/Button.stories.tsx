@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect } from "@storybook/jest";
+import { action } from "@storybook/addon-actions";
 import { within, userEvent } from "@storybook/testing-library";
-import { Button } from "ui";
 import "twin.macro";
+import Button from "./components/Button";
+import { theme } from "ui";
 
 const meta = {
   title: "ui/Button",
@@ -10,12 +12,11 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     children: { control: "text" },
-    onClick: { action: true },
-    size: { control: { type: "select" }, options: ["sm", "md", "lg"] },
   },
   args: {
-    children: "Click!",
-    size: "md",
+    children: "Hello Button",
+    onClick: action("clicked"),
+    ...theme.button.defaultProps,
   },
 } satisfies Meta<typeof Button>;
 
@@ -79,5 +80,23 @@ export const Variants: Story = {
   argTypes: {
     children: { table: { disable: true } },
     variant: { table: { disable: true } },
+  },
+};
+
+export const Colors: Story = {
+  name: "Colors",
+  render: (args) => (
+    <div tw="flex items-end gap-x-4">
+      <Button {...args} color="white">
+        White
+      </Button>
+      <Button {...args} color="green">
+        Green
+      </Button>
+    </div>
+  ),
+  argTypes: {
+    children: { table: { disable: true } },
+    color: { table: { disable: true } },
   },
 };

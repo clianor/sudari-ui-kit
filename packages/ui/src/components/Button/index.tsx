@@ -1,15 +1,21 @@
 import * as React from "react";
 import "twin.macro";
 import { useTheme } from "../../context/theme";
-import { size, variant } from "./type";
+import { color, size, variant } from "./type";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: variant;
   size?: size;
+  color?: color;
 }
 
-export const Button: React.FC<ButtonProps> = ({ variant, size, ...rest }) => {
+export const Button: React.FC<ButtonProps> = ({
+  variant,
+  size,
+  color,
+  ...rest
+}) => {
   // init
   const { button } = useTheme();
   const { defaultProps, styles } = button;
@@ -18,9 +24,10 @@ export const Button: React.FC<ButtonProps> = ({ variant, size, ...rest }) => {
   // set default props
   variant = variant ?? defaultProps.variant;
   size = size ?? defaultProps.size;
+  color = color ?? defaultProps.color;
 
   const baseStyles = base.initial;
-  const buttonVariantStyles = variants[variant];
+  const buttonVariantStyles = variants[variant][color];
   const buttonSizeStyle = sizes[size];
 
   return (
