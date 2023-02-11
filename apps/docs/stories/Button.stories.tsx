@@ -3,7 +3,7 @@ import { expect } from "@storybook/jest";
 import { action } from "@storybook/addon-actions";
 import { within, userEvent } from "@storybook/testing-library";
 import "twin.macro";
-import Button from "./components/Button";
+import Button from ".";
 import { theme } from "ui";
 
 const meta = {
