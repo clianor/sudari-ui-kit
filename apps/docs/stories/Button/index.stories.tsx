@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect } from "@storybook/jest";
-import { action } from "@storybook/addon-actions";
 import { within, userEvent } from "@storybook/testing-library";
 import "twin.macro";
 import Button from ".";
@@ -12,10 +11,10 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     children: { control: "text" },
+    onClick: { action: "clicked" },
   },
   args: {
     children: "Hello Button",
-    onClick: action("clicked"),
     ...theme.button.defaultProps,
   },
 } satisfies Meta<typeof Button>;
