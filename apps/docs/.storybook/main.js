@@ -22,6 +22,7 @@ const config = {
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
       skipChildrenPropWithoutDoc: false,
       propFilter: (prop) => {
         if (prop.name === "children") {

@@ -5,4 +5,4 @@ export * from "./components/Button";
 export * from "./context/theme";
 
 // theme
-export * from "./theme";
+export { default as theme } from "./theme";
