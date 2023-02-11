@@ -65,7 +65,7 @@ const button: ButtonStyleTypes = {
         ],
       },
       text: {
-        white: [],
+        white: [tw`text-white`, tw`hover:bg-white/10`, tw`active:bg-white/30`],
         green: [tw`text-green-500`, tw`hover:bg-green-500/10`, tw`active:bg-green-500/30`],
       },
     },
