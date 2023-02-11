@@ -6,4 +6,4 @@
 //   | "green"
 //   | "blue"
 //   | "red";
-export type colors = "white" | "green";
+export type colors = 'white' | 'green';

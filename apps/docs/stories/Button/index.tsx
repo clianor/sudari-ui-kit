@@ -1,4 +1,4 @@
-import { Button as UIButton, ButtonProps as UIButtonProps, theme } from "ui";
+import { Button as UIButton, ButtonProps as UIButtonProps, theme } from 'ui';
 
 export type ButtonProps = UIButtonProps;
 

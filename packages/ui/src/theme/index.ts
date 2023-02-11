@@ -1,4 +1,4 @@
-import button from "./button";
+import button from './button';
 
 const theme = {
   button,

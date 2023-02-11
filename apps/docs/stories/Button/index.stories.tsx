@@ -1,33 +1,34 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { expect } from "@storybook/jest";
-import { within, userEvent } from "@storybook/testing-library";
-import "twin.macro";
-import Button from ".";
-import { theme } from "ui";
+import { expect } from '@storybook/jest';
+import type { Meta, StoryObj } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
+import 'twin.macro';
+import { theme } from 'ui';
 
-const meta = {
-  title: "ui/Button",
+import Button from '.';
+
+const meta: Meta<typeof Button> = {
+  title: 'ui/Button',
   component: Button,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    children: { control: "text" },
-    onClick: { action: "clicked" },
+    children: { control: 'text' },
+    onClick: { action: 'clicked' },
   },
   args: {
-    children: "Hello Button",
+    children: 'Hello Button',
     ...theme.button.defaultProps,
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: "Default",
+  name: 'Default',
   play: ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
 
-    const button = canvas.getByRole("button");
+    const button = canvas.getByRole('button');
     expect(button).toBeInTheDocument();
 
     userEvent.click(button);
@@ -41,7 +42,7 @@ export const Default: Story = {
 };
 
 export const Sizes: Story = {
-  name: "Sizes",
+  name: 'Sizes',
   render: (args) => (
     <div tw="flex items-end gap-x-4">
       <Button {...args} size="sm">
@@ -62,7 +63,7 @@ export const Sizes: Story = {
 };
 
 export const Variants: Story = {
-  name: "Variants",
+  name: 'Variants',
   render: (args) => (
     <div tw="flex items-end gap-x-4">
       <Button {...args} variant="filled">
@@ -83,7 +84,7 @@ export const Variants: Story = {
 };
 
 export const Colors: Story = {
-  name: "Colors",
+  name: 'Colors',
   render: (args) => (
     <div tw="flex items-end gap-x-4">
       <Button {...args} color="white">
