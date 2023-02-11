@@ -1,6 +1,7 @@
-import { CSSInterpolation } from "@emotion/serialize";
-import tw from "twin.macro";
-import type { color, size, variant } from "../../components/Button/type";
+import { CSSInterpolation } from '@emotion/serialize';
+import tw from 'twin.macro';
+
+import type { color, size, variant } from '../../components/Button/type';
 
 export interface ButtonStyleTypes {
   defaultProps: {
@@ -19,9 +20,9 @@ export interface ButtonStyleTypes {
 
 const button: ButtonStyleTypes = {
   defaultProps: {
-    variant: "filled",
-    size: "md",
-    color: "green",
+    variant: 'filled',
+    size: 'md',
+    color: 'green',
   },
   styles: {
     base: {
@@ -65,11 +66,7 @@ const button: ButtonStyleTypes = {
       },
       text: {
         white: [],
-        green: [
-          tw`text-green-500`,
-          tw`hover:bg-green-500/10`,
-          tw`active:bg-green-500/30`,
-        ],
+        green: [tw`text-green-500`, tw`hover:bg-green-500/10`, tw`active:bg-green-500/30`],
       },
     },
     sizes: {
