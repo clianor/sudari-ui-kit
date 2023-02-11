@@ -75,3 +75,21 @@ export const Variants: Story = {
     variant: { table: { disable: true } },
   },
 };
+
+export const Colors: Story = {
+  name: "Colors",
+  render: (args) => (
+    <div tw="flex items-end gap-x-4">
+      <Button {...args} color="white">
+        White
+      </Button>
+      <Button {...args} color="green">
+        Green
+      </Button>
+    </div>
+  ),
+  argTypes: {
+    children: { table: { disable: true } },
+    color: { table: { disable: true } },
+  },
+};
