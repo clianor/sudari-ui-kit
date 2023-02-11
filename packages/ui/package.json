@@ -14,7 +14,7 @@
     "build:rollup": "rollup -c",
     "build": "pnpm run build:rollup && pnpm run build:types",
     "dev": "tsc -w | rollup -cw",
-    "lint": "eslint *.ts*",
+    "lint": "eslint src/**/*.ts*",
     "clean": "rimraf .turbo dist"
   },
   "devDependencies": {
