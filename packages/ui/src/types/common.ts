@@ -1,9 +1,1 @@
-// export type colors =
-//   | "white"
-//   | "gray"
-//   | "orange"
-//   | "yellow"
-//   | "green"
-//   | "blue"
-//   | "red";
-export type colors = 'white' | 'green';
+export type colors = 'white' | 'gray' | 'yellow' | 'green' | 'blue' | 'red' | 'purple';

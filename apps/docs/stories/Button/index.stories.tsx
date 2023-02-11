@@ -90,8 +90,23 @@ export const Colors: Story = {
       <Button {...args} color="white">
         White
       </Button>
+      <Button {...args} color="gray">
+        Gray
+      </Button>
+      <Button {...args} color="yellow">
+        Yellow
+      </Button>
       <Button {...args} color="green">
         Green
+      </Button>
+      <Button {...args} color="blue">
+        Blue
+      </Button>
+      <Button {...args} color="red">
+        Red
+      </Button>
+      <Button {...args} color="purple">
+        Purple
       </Button>
     </div>
   ),
