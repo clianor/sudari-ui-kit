@@ -7,8 +7,7 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build --docs",
     "preview": "serve storybook-static -l 6006",
-    "clean": "rimraf .turbo storybook-static node_modules",
-    "test-storybook": "test-storybook --url http://localhost:6006"
+    "clean": "rimraf .turbo storybook-static node_modules"
   },
   "keywords": [],
   "author": "",
