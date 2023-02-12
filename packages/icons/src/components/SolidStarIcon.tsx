@@ -1,7 +1,5 @@
 import { FC } from 'react';
 
-import { IconType } from '../types/IconType';
-
 export const SolidStarIcon: FC<IconType> = (props) => {
   return (
     <svg
