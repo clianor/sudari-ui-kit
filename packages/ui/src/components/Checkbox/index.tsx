@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { CheckIcon } from 'icons';
 import { InputHTMLAttributes, forwardRef } from 'react';
 import 'twin.macro';
@@ -12,7 +13,7 @@ export interface CheckboxProps
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, color, ...rest }, ref) => {
+  ({ label, color, disabled, ...rest }, ref) => {
     // init
     const { checkbox } = useTheme();
     const { defaultProps, styles } = checkbox;
@@ -28,8 +29,15 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const labelStyle = base.label;
 
     return (
-      <label css={containerStyle}>
-        <input ref={ref} className="peer" type="checkbox" css={[inputStyle]} {...rest} />
+      <label className={clsx(disabled && 'disabled')} css={containerStyle}>
+        <input
+          ref={ref}
+          className="peer"
+          type="checkbox"
+          disabled={disabled}
+          css={[inputStyle]}
+          {...rest}
+        />
         <div css={iconStyle}>
           <CheckIcon />
         </div>

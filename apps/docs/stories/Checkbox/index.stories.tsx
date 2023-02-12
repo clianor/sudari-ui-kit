@@ -40,4 +40,27 @@ export const Colors: Story = {
       <Checkbox {...args} color="purple" label="Purple" />
     </Fragment>
   ),
+  argTypes: {
+    label: { table: { disable: true } },
+    color: { table: { disable: true } },
+  },
+};
+
+export const Disabled: Story = {
+  name: 'Disabled',
+  render: (args) => (
+    <Fragment>
+      <Checkbox {...args} color="gray" label="Gray" disabled />
+      <Checkbox {...args} color="yellow" label="Yellow" disabled />
+      <Checkbox {...args} color="green" label="Green" disabled />
+      <Checkbox {...args} color="blue" label="Blue" disabled />
+      <Checkbox {...args} color="red" label="Red" disabled />
+      <Checkbox {...args} color="purple" label="Purple" disabled />
+    </Fragment>
+  ),
+  argTypes: {
+    label: { table: { disable: true } },
+    color: { table: { disable: true } },
+    disabled: { table: { disable: true } },
+  },
 };

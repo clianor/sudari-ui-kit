@@ -15,6 +15,7 @@ importers:
       '@tailwindcss/line-clamp': ^0.4.2
       '@trivago/prettier-plugin-sort-imports': ^4.0.0
       autoprefixer: ^10.4.13
+      clsx: ^1.2.1
       eslint-config-custom: workspace:*
       husky: ^8.0.3
       lint-staged: ^13.1.1
@@ -35,6 +36,7 @@ importers:
       '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
       '@trivago/prettier-plugin-sort-imports': 4.0.0_ht5m4fjxbv43inzcw5hdarafmm
       autoprefixer: 10.4.13_postcss@8.4.21
+      clsx: 1.2.1
       eslint-config-custom: link:packages/eslint-config-custom
       husky: 8.0.3
       lint-staged: 13.1.1
@@ -4866,6 +4868,11 @@ packages:
       is-plain-object: 2.0.4
       kind-of: 6.0.3
       shallow-clone: 3.0.1
+    dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: true
 
   /color-convert/1.9.3:
