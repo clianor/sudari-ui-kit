@@ -4,7 +4,8 @@ import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
 
-export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
+export interface CheckboxProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'> {
   label?: string;
 }
 
