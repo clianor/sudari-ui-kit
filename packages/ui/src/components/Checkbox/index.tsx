@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { CheckIcon } from 'icons';
-import { InputHTMLAttributes, forwardRef } from 'react';
+import { InputHTMLAttributes, ReactNode, forwardRef } from 'react';
 import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
@@ -9,11 +9,12 @@ import { color } from './type';
 export interface CheckboxProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'> {
   label?: string;
+  icon?: ReactNode;
   color?: color;
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, color, disabled, ...rest }, ref) => {
+  ({ label, color, disabled, icon, ...rest }, ref) => {
     // init
     const { checkbox } = useTheme();
     const { defaultProps, styles } = checkbox;
@@ -38,9 +39,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           css={[inputStyle]}
           {...rest}
         />
-        <div css={iconStyle}>
-          <CheckIcon />
-        </div>
+        <div css={iconStyle}>{icon || <CheckIcon />}</div>
         {label && <span css={labelStyle}>{label}</span>}
       </label>
     );
