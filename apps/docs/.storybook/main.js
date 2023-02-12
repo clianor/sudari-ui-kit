@@ -28,6 +28,9 @@ const config = {
         if (prop.name === 'children') {
           return false;
         }
+        if (['disabled', 'value', 'checked', 'placeholder'].includes(prop.name)) {
+          return true;
+        }
         if (prop.parent) {
           return (
             !/@types\/react/.test(prop.parent.fileName) &&

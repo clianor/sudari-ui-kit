@@ -4,7 +4,8 @@ import 'twin.macro';
 import { useTheme } from '../../context/theme';
 import { color, size, variant } from './type';
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'value' | 'placeholder'> {
   variant?: variant;
   size?: size;
   color?: color;
