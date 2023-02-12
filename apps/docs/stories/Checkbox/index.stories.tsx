@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Fragment } from 'react';
 import 'twin.macro';
 import { theme } from 'ui';
 
@@ -25,4 +26,18 @@ export const WithLabel: Story = {
   args: {
     label: 'Label',
   },
+};
+
+export const Colors: Story = {
+  name: 'Colors',
+  render: (args) => (
+    <Fragment>
+      <Checkbox {...args} color="gray" label="Gray" />
+      <Checkbox {...args} color="yellow" label="Yellow" />
+      <Checkbox {...args} color="green" label="Green" />
+      <Checkbox {...args} color="blue" label="Blue" />
+      <Checkbox {...args} color="red" label="Red" />
+      <Checkbox {...args} color="purple" label="Purple" />
+    </Fragment>
+  ),
 };
