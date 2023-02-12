@@ -116,3 +116,11 @@ export const Colors: Story = {
     color: { table: { disable: true } },
   },
 };
+
+export const FullWidth: Story = {
+  name: 'Full Width',
+  args: {
+    children: 'Full Width Button',
+    fullWidth: true,
+  },
+};

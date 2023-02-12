@@ -11,10 +11,12 @@ export interface ButtonStyleTypes {
     variant: variant;
     size: size;
     color: color;
+    fullWidth: boolean;
   };
   styles: {
     base: {
       initial: CSSInterpolation;
+      fullWidth: CSSInterpolation;
     };
     variants: { [key in variant]: { [key in color]: CSSInterpolation } };
     sizes: { [key in size]: CSSInterpolation };
@@ -26,6 +28,7 @@ const button: ButtonStyleTypes = {
     variant: 'filled',
     size: 'md',
     color: 'green',
+    fullWidth: false,
   },
   styles: {
     base: {
@@ -34,6 +37,7 @@ const button: ButtonStyleTypes = {
         tw`font-sans font-bold text-center align-middle`,
         tw`disabled:(opacity-50 shadow-none pointer-events-none)`,
       ],
+      fullWidth: tw`block w-full`,
     },
     variants: {
       filled,
