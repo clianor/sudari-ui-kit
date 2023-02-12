@@ -61,6 +61,7 @@ importers:
       '@storybook/testing-library': ^0.0.14-next.1
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
+      icons: workspace:*
       react: ^18.2.0
       react-docgen-typescript-plugin: ^1.0.5
       react-dom: ^18.2.0
@@ -85,6 +86,7 @@ importers:
       '@storybook/testing-library': 0.0.14-next.1
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
+      icons: link:../../packages/icons
       react: 18.2.0
       react-docgen-typescript-plugin: 1.0.5_hhrrucqyg4eysmfpujvov2ym5u
       react-dom: 18.2.0_react@18.2.0

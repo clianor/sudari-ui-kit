@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { OutlineStarIcon, SolidStarIcon } from 'icons';
 import { Fragment } from 'react';
 import 'twin.macro';
 import { theme } from 'ui';
@@ -62,5 +63,20 @@ export const Disabled: Story = {
     label: { table: { disable: true } },
     color: { table: { disable: true } },
     disabled: { table: { disable: true } },
+  },
+};
+
+export const CustomIcon: Story = {
+  name: 'Custom icon',
+  render: (args) => (
+    <Fragment>
+      <Checkbox {...args} icon={<OutlineStarIcon />} checked />
+      <Checkbox {...args} icon={<SolidStarIcon />} checked />
+    </Fragment>
+  ),
+  argTypes: {
+    label: { table: { disable: true } },
+    checked: { table: { disable: true } },
+    icon: { table: { disable: true } },
   },
 };
