@@ -111,10 +111,7 @@ importers:
     devDependencies:
       typescript: 4.9.5
 
-  packages/tsconfig:
-    specifiers: {}
-
-  packages/ui:
+  packages/icons:
     specifiers:
       '@emotion/cache': ^11.10.5
       '@emotion/react': ^11.10.5
@@ -150,6 +147,54 @@ importers:
       babel-plugin-macros: 3.1.0
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
+      rollup: 3.14.0
+      rollup-plugin-commonjs: 10.1.0_rollup@3.14.0
+      rollup-plugin-peer-deps-external: 2.2.4_rollup@3.14.0
+      rollup-plugin-terser: 7.0.2_rollup@3.14.0
+      tsconfig: link:../tsconfig
+      typescript: 4.9.5
+
+  packages/tsconfig:
+    specifiers: {}
+
+  packages/ui:
+    specifiers:
+      '@emotion/cache': ^11.10.5
+      '@emotion/react': ^11.10.5
+      '@emotion/styled': ^11.10.5
+      '@rollup/plugin-babel': ^6.0.3
+      '@rollup/plugin-commonjs': ^24.0.1
+      '@rollup/plugin-json': ^6.0.0
+      '@rollup/plugin-node-resolve': ^15.0.1
+      '@types/react': ^18.0.27
+      babel-loader: ^9.1.2
+      babel-plugin-macros: ^3.1.0
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      icons: workspace:*
+      react: ^18.2.0
+      rollup: ^3.14.0
+      rollup-plugin-commonjs: ^10.1.0
+      rollup-plugin-peer-deps-external: ^2.2.4
+      rollup-plugin-terser: ^7.0.2
+      tsconfig: workspace:*
+      typescript: ^4.9.5
+    dependencies:
+      '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
+      '@emotion/styled': 11.10.5_4erqsq3n444jecyuvaxwc5b3vi
+      '@types/react': 18.0.27
+      react: 18.2.0
+    devDependencies:
+      '@emotion/cache': 11.10.5
+      '@rollup/plugin-babel': 6.0.3_55vfdocqwgqdto4ii6d2bdjw5q
+      '@rollup/plugin-commonjs': 24.0.1_rollup@3.14.0
+      '@rollup/plugin-json': 6.0.0_rollup@3.14.0
+      '@rollup/plugin-node-resolve': 15.0.1_rollup@3.14.0
+      babel-loader: 9.1.2_la66t7xldg4uecmyawueag5wkm
+      babel-plugin-macros: 3.1.0
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      icons: link:../icons
       rollup: 3.14.0
       rollup-plugin-commonjs: 10.1.0_rollup@3.14.0
       rollup-plugin-peer-deps-external: 2.2.4_rollup@3.14.0
