@@ -1,5 +1,6 @@
 // components
 export * from './components/Button';
+export * from './components/Checkbox';
 
 // context
 export * from './context/theme';
