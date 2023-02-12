@@ -1,15 +1,15 @@
-import { babel } from "@rollup/plugin-babel";
-import commonjs from "@rollup/plugin-commonjs";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
-import json from "@rollup/plugin-json";
-import { terser } from "rollup-plugin-terser";
+import { babel } from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import { terser } from 'rollup-plugin-terser';
 
 const inputSrc = [
-  ["./src/index.tsx", "es"],
-  ["./src/index.tsx", "cjs"],
+  ['./src/index.tsx', 'es'],
+  ['./src/index.tsx', 'cjs'],
 ];
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default inputSrc.map(([input, format]) => {
   return {
@@ -17,17 +17,17 @@ export default inputSrc.map(([input, format]) => {
     output: {
       dir: `dist/${format}`,
       format,
-      exports: "auto",
-      preserveModules: format === "cjs",
+      exports: 'auto',
+      preserveModules: format === 'cjs',
     },
     plugins: [
       babel({
         extensions,
-        include: ["./src/**/*"],
-        exclude: "node_modules/**",
+        include: ['./src/**/*'],
+        exclude: 'node_modules/**',
       }),
       nodeResolve({ extensions }),
-      commonjs({ include: "node_modules/**" }),
+      commonjs({ include: 'node_modules/**' }),
       peerDepsExternal(),
       json(),
       terser(),
