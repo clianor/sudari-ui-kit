@@ -1,6 +1,7 @@
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
+import { Fragment } from 'react';
 import 'twin.macro';
 import { theme } from 'ui';
 
@@ -44,7 +45,7 @@ export const Default: Story = {
 export const Sizes: Story = {
   name: 'Sizes',
   render: (args) => (
-    <div tw="flex items-end gap-x-4">
+    <Fragment>
       <Button {...args} size="sm">
         Small
       </Button>
@@ -54,7 +55,7 @@ export const Sizes: Story = {
       <Button {...args} size="lg">
         Large
       </Button>
-    </div>
+    </Fragment>
   ),
   argTypes: {
     children: { table: { disable: true } },
@@ -65,7 +66,7 @@ export const Sizes: Story = {
 export const Variants: Story = {
   name: 'Variants',
   render: (args) => (
-    <div tw="flex items-end gap-x-4">
+    <Fragment>
       <Button {...args} variant="filled">
         Filled
       </Button>
@@ -75,7 +76,7 @@ export const Variants: Story = {
       <Button {...args} variant="text">
         Text
       </Button>
-    </div>
+    </Fragment>
   ),
   argTypes: {
     children: { table: { disable: true } },
@@ -86,7 +87,7 @@ export const Variants: Story = {
 export const Colors: Story = {
   name: 'Colors',
   render: (args) => (
-    <div tw="flex items-end gap-x-4">
+    <Fragment>
       <Button {...args} color="white">
         White
       </Button>
@@ -108,7 +109,7 @@ export const Colors: Story = {
       <Button {...args} color="purple">
         Purple
       </Button>
-    </div>
+    </Fragment>
   ),
   argTypes: {
     children: { table: { disable: true } },
