@@ -12,7 +12,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text' },
+    children: { control: 'text', name: 'label', description: '버튼의 자식요소' },
     onClick: { action: 'clicked' },
   },
   args: {
