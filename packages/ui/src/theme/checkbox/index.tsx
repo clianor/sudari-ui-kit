@@ -38,6 +38,7 @@ const checkbox: CheckboxStyleTypes = {
           tw`w-6 h-6 p-1`,
           tw`text-transparent border-2 border-gray-500 rounded stroke-2`,
           tw`peer-checked:(bg-gray-500 text-white)`,
+          tw`peer-indeterminate:(bg-gray-500 text-white)`,
           tw`peer-disabled:opacity-50`,
         ],
         yellow: [
@@ -45,6 +46,7 @@ const checkbox: CheckboxStyleTypes = {
           tw`w-6 h-6 p-1`,
           tw`text-transparent border-2 border-yellow-500 rounded stroke-2`,
           tw`peer-checked:(bg-yellow-500 text-white)`,
+          tw`peer-indeterminate:(bg-yellow-500 text-white)`,
           tw`peer-disabled:opacity-50`,
         ],
         green: [
@@ -52,6 +54,7 @@ const checkbox: CheckboxStyleTypes = {
           tw`w-6 h-6 p-1`,
           tw`text-transparent border-2 border-green-500 rounded stroke-2`,
           tw`peer-checked:(bg-green-500 text-white)`,
+          tw`peer-indeterminate:(bg-green-500 text-white)`,
           tw`peer-disabled:opacity-50`,
         ],
         blue: [
@@ -59,6 +62,7 @@ const checkbox: CheckboxStyleTypes = {
           tw`w-6 h-6 p-1`,
           tw`text-transparent border-2 border-blue-500 rounded stroke-2`,
           tw`peer-checked:(bg-blue-500 text-white)`,
+          tw`peer-indeterminate:(bg-blue-500 text-white)`,
           tw`peer-disabled:opacity-50`,
         ],
         red: [
@@ -66,6 +70,7 @@ const checkbox: CheckboxStyleTypes = {
           tw`w-6 h-6 p-1`,
           tw`text-transparent border-2 border-red-500 rounded stroke-2`,
           tw`peer-checked:(bg-red-500 text-white)`,
+          tw`peer-indeterminate:(bg-red-500 text-white)`,
           tw`peer-disabled:opacity-50`,
         ],
         purple: [
@@ -73,6 +78,7 @@ const checkbox: CheckboxStyleTypes = {
           tw`w-6 h-6 p-1`,
           tw`text-transparent border-2 border-purple-500 rounded stroke-2`,
           tw`peer-checked:(bg-purple-500 text-white)`,
+          tw`peer-indeterminate:(bg-purple-500 text-white)`,
           tw`peer-disabled:opacity-50`,
         ],
       },

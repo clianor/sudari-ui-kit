@@ -1,6 +1,7 @@
 import clsx from 'clsx';
-import { CheckIcon } from 'icons';
-import { InputHTMLAttributes, ReactNode, forwardRef } from 'react';
+import { CheckIcon, MinusIcon } from 'icons';
+import { InputHTMLAttributes, ReactNode, forwardRef, useEffect, useRef } from 'react';
+import { mergeRefs } from 'react-merge-refs';
 import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
@@ -9,12 +10,15 @@ import { color } from './type';
 export interface CheckboxProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'> {
   label?: string;
+  indeterminate?: boolean;
+  indeterminateIcon?: ReactNode;
   icon?: ReactNode;
   color?: color;
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, color, disabled, icon, ...rest }, ref) => {
+  ({ label, indeterminate, indeterminateIcon, color, disabled, icon, ...rest }, ref) => {
+    const localRef = useRef<HTMLInputElement>(null);
     // init
     const { checkbox } = useTheme();
     const { defaultProps, styles } = checkbox;
@@ -22,6 +26,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 
     // set default props
     color = color ?? defaultProps.color;
+    icon = icon || <CheckIcon />;
+    indeterminateIcon = indeterminateIcon || <MinusIcon />;
 
     // set styles
     const containerStyle = base.container;
@@ -29,17 +35,25 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const iconStyle = base.icon[color];
     const labelStyle = base.label;
 
+    useEffect(() => {
+      if (indeterminate && localRef.current) {
+        localRef.current.indeterminate = true;
+      } else if (localRef.current) {
+        localRef.current.indeterminate = false;
+      }
+    }, [indeterminate]);
+
     return (
       <label className={clsx(disabled && 'disabled')} css={containerStyle}>
         <input
-          ref={ref}
+          ref={mergeRefs([localRef, ref])}
           className="peer"
           type="checkbox"
           disabled={disabled}
           css={[inputStyle]}
           {...rest}
         />
-        <div css={iconStyle}>{icon || <CheckIcon />}</div>
+        <div css={iconStyle}>{indeterminate ? indeterminateIcon : icon}</div>
         {label && <span css={labelStyle}>{label}</span>}
       </label>
     );
