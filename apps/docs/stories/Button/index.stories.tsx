@@ -117,6 +117,42 @@ export const Colors: Story = {
   },
 };
 
+export const Disabled: Story = {
+  name: 'Disabled',
+  render: (args) => (
+    <Fragment>
+      <Button {...args} color="white">
+        White
+      </Button>
+      <Button {...args} color="gray">
+        Gray
+      </Button>
+      <Button {...args} color="yellow">
+        Yellow
+      </Button>
+      <Button {...args} color="green">
+        Green
+      </Button>
+      <Button {...args} color="blue">
+        Blue
+      </Button>
+      <Button {...args} color="red">
+        Red
+      </Button>
+      <Button {...args} color="purple">
+        Purple
+      </Button>
+    </Fragment>
+  ),
+  argTypes: {
+    children: { table: { disable: true } },
+    color: { table: { disable: true } },
+  },
+  args: {
+    disabled: true,
+  },
+};
+
 export const FullWidth: Story = {
   name: 'Full Width',
   args: {
