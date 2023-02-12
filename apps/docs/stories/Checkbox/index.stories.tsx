@@ -47,6 +47,45 @@ export const Colors: Story = {
   },
 };
 
+export const Checked: Story = {
+  name: 'Checked',
+  render: (args) => (
+    <Fragment>
+      <Checkbox {...args} color="gray" label="Gray" checked />
+      <Checkbox {...args} color="yellow" label="Yellow" checked />
+      <Checkbox {...args} color="green" label="Green" checked />
+      <Checkbox {...args} color="blue" label="Blue" checked />
+      <Checkbox {...args} color="red" label="Red" checked />
+      <Checkbox {...args} color="purple" label="Purple" checked />
+    </Fragment>
+  ),
+  argTypes: {
+    label: { table: { disable: true } },
+    color: { table: { disable: true } },
+    checked: { table: { disable: true } },
+  },
+};
+
+export const Indeterminate: Story = {
+  name: 'Indeterminate',
+  render: (args) => (
+    <Fragment>
+      <Checkbox {...args} color="gray" label="Gray" indeterminate />
+      <Checkbox {...args} color="yellow" label="Yellow" indeterminate />
+      <Checkbox {...args} color="green" label="Green" indeterminate />
+      <Checkbox {...args} color="blue" label="Blue" indeterminate />
+      <Checkbox {...args} color="red" label="Red" indeterminate />
+      <Checkbox {...args} color="purple" label="Purple" indeterminate />
+    </Fragment>
+  ),
+  argTypes: {
+    label: { table: { disable: true } },
+    color: { table: { disable: true } },
+    checked: { table: { disable: true } },
+    indeterminate: { table: { disable: true } },
+  },
+};
+
 export const Disabled: Story = {
   name: 'Disabled',
   render: (args) => (
