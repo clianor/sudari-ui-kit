@@ -23,6 +23,7 @@ export default inputSrc.map(([input, format]) => {
     plugins: [
       babel({
         extensions,
+        babelHelpers: 'bundled',
         include: ['./src/**/*'],
         exclude: 'node_modules/**',
       }),
