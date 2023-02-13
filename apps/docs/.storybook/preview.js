@@ -1,6 +1,7 @@
+import { ThemeProvider } from '@sudari/ui';
+
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
-import { ThemeProvider } from '@sudari/ui';
 import React from 'react';
 import 'twin.macro';
 

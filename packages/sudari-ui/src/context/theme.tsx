@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { PropsWithChildren, createContext, useContext } from 'react';
 
 import GlobalStyles from '../styles/GlobalStyles';
 import theme from '../theme';
@@ -7,7 +7,7 @@ export const ThemeContext = createContext<typeof theme | null>(null);
 
 export const ThemeConsumer = ThemeContext.Consumer;
 
-interface ThemeProviderProps extends React.PropsWithChildren {
+interface ThemeProviderProps extends PropsWithChildren {
   value: typeof theme;
 }
 
