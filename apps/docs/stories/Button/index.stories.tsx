@@ -1,7 +1,8 @@
+import { theme } from '@sudari/ui';
+
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import { theme } from '@sudari/ui';
 import { Fragment } from 'react';
 import 'twin.macro';
 

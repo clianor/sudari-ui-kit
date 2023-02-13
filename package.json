@@ -14,7 +14,7 @@
     "dev": "turbo run dev",
     "preview": "turbo run preview",
     "lint": "turbo run lint",
-    "format": "prettier --write \"./**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
     "clean": "turbo run clean"
   },
   "devDependencies": {

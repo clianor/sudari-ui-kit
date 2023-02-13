@@ -3,7 +3,8 @@
 
 ## 앱 및 패키지
 - `docs`: storybook
-- `ui`: 리액트 컴포넌트 라이브러리
+- `@sudari/icons`: 리액트 아이콘 컴포넌트 라이브러리
+- `@sudari/ui`: 리액트 컴포넌트 라이브러리
 - `eslint-config-custom`: eslint 설정
 - `tsconfig`: monorepo에서 사용할 typescript 설정
 
