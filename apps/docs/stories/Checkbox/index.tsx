@@ -1,4 +1,4 @@
-import { Checkbox as UICheckbox, CheckboxProps as UICheckboxProps, theme } from 'ui';
+import { Checkbox as UICheckbox, CheckboxProps as UICheckboxProps, theme } from '@sudari/ui';
 
 export type CheckboxProps = UICheckboxProps;
 

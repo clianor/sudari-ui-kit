@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { OutlineStarIcon, SolidStarIcon } from '@sudari/icons';
+import { theme } from '@sudari/ui';
 import { Fragment } from 'react';
 import 'twin.macro';
-import { theme } from 'ui';
 
 import Checkbox from '.';
 
 const meta: Meta<typeof Checkbox> = {
-  title: 'ui/Checkbox',
+  title: '@sudari/ui/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   args: {
