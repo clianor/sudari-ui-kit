@@ -1,4 +1,4 @@
-# dh-ui-kit
+# sudari-ui-kit
 개인적으로 만드는 ui kit 프로젝트입니다.
 
 ## 앱 및 패키지
