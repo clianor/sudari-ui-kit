@@ -5,19 +5,19 @@ import { mergeRefs } from 'react-merge-refs';
 import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
-import { color } from './type';
+import { color, size } from './type';
 
 export interface CheckboxProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'> {
-  label?: string;
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'size' | 'placeholder'> {
   indeterminate?: boolean;
   indeterminateIcon?: ReactNode;
   icon?: ReactNode;
+  size?: size;
   color?: color;
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, indeterminate, indeterminateIcon, color, disabled, icon, ...props }, ref) => {
+  ({ indeterminate, indeterminateIcon, size, color, disabled, icon, ...props }, ref) => {
     const localRef = useRef<HTMLInputElement>(null);
     // init
     const { checkbox } = useTheme();
@@ -25,15 +25,16 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const { base } = styles;
 
     // set default props
+    size = size ?? defaultProps.size;
     color = color ?? defaultProps.color;
     icon = icon || <CheckIcon />;
     indeterminateIcon = indeterminateIcon || <MinusIcon />;
 
     // set styles
     const containerStyle = base.container;
+    const sizeStyle = base.sizes[size];
     const inputStyle = base.input;
     const iconStyle = base.icon[color];
-    const labelStyle = base.label;
 
     useEffect(() => {
       if (indeterminate && localRef.current) {
@@ -53,8 +54,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           css={[inputStyle]}
           {...props}
         />
-        <div css={iconStyle}>{indeterminate ? indeterminateIcon : icon}</div>
-        {label && <span css={labelStyle}>{label}</span>}
+        <div css={[sizeStyle, iconStyle]}>{indeterminate ? indeterminateIcon : icon}</div>
       </label>
     );
   },
