@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { OutlineStarIcon, SolidStarIcon } from 'icons';
+import { OutlineStarIcon, SolidStarIcon } from '@sudari/icons';
 import { Fragment } from 'react';
 import 'twin.macro';
 import { theme } from 'ui';

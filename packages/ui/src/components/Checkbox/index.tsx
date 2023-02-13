@@ -1,5 +1,5 @@
+import { CheckIcon, MinusIcon } from '@sudari/icons';
 import clsx from 'clsx';
-import { CheckIcon, MinusIcon } from 'icons';
 import { InputHTMLAttributes, ReactNode, forwardRef, useEffect, useRef } from 'react';
 import { mergeRefs } from 'react-merge-refs';
 import 'twin.macro';

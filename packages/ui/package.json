@@ -27,7 +27,7 @@
     "babel-plugin-macros": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
-    "icons": "workspace:*",
+    "@sudari/icons": "workspace:0.0.0",
     "rollup": "^3.14.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
