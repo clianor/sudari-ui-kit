@@ -17,7 +17,7 @@ export interface CheckboxProps
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, indeterminate, indeterminateIcon, color, disabled, icon, ...rest }, ref) => {
+  ({ label, indeterminate, indeterminateIcon, color, disabled, icon, ...props }, ref) => {
     const localRef = useRef<HTMLInputElement>(null);
     // init
     const { checkbox } = useTheme();
@@ -51,7 +51,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           type="checkbox"
           disabled={disabled}
           css={[inputStyle]}
-          {...rest}
+          {...props}
         />
         <div css={iconStyle}>{indeterminate ? indeterminateIcon : icon}</div>
         {label && <span css={labelStyle}>{label}</span>}

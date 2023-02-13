@@ -12,7 +12,7 @@ export interface ButtonProps
   fullWidth?: boolean;
 }
 
-export const Button: FC<ButtonProps> = ({ variant, size, color, fullWidth, ...rest }) => {
+export const Button: FC<ButtonProps> = ({ variant, size, color, fullWidth, ...props }) => {
   // init
   const { button } = useTheme();
   const { defaultProps, styles } = button;
@@ -32,7 +32,7 @@ export const Button: FC<ButtonProps> = ({ variant, size, color, fullWidth, ...re
 
   return (
     <button
-      {...rest}
+      {...props}
       css={[baseStyles, fullWidth && fullWidthStyles, buttonVariantStyles, buttonSizeStyle]}
     />
   );
