@@ -17,7 +17,7 @@ export default inputSrc.map(([input, format]) => {
     output: {
       dir: `dist/${format}`,
       format,
-      exports: 'auto',
+      exports: format === 'cjs' ? 'named' : 'auto',
       preserveModules: format === 'cjs',
     },
     plugins: [
