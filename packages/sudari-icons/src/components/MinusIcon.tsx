@@ -3,10 +3,10 @@ import { FC } from 'react';
 export const MinusIcon: FC<IconType> = (props) => {
   return (
     <svg
-      clip-rule="evenodd"
-      fill-rule="evenodd"
-      stroke-linejoin="round"
-      stroke-miterlimit="2"
+      clipRule="evenodd"
+      fillRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
       viewBox="0 0 24 24"
       width="100%"
       height="100%"
