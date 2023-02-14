@@ -1,18 +1,19 @@
+import { theme } from '@sudari/ui';
+
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import { Fragment } from 'react';
 import 'twin.macro';
-import { theme } from 'ui';
 
 import Button from '.';
 
 const meta: Meta<typeof Button> = {
-  title: 'ui/Button',
+  title: '@sudari/ui/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text' },
+    children: { control: 'text', name: 'label', description: '버튼의 자식요소' },
     onClick: { action: 'clicked' },
   },
   args: {

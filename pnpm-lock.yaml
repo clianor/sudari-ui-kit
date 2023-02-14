@@ -15,6 +15,7 @@ importers:
       '@tailwindcss/line-clamp': ^0.4.2
       '@trivago/prettier-plugin-sort-imports': ^4.0.0
       autoprefixer: ^10.4.13
+      clsx: ^1.2.1
       eslint-config-custom: workspace:*
       husky: ^8.0.3
       lint-staged: ^13.1.1
@@ -35,6 +36,7 @@ importers:
       '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
       '@trivago/prettier-plugin-sort-imports': 4.0.0_ht5m4fjxbv43inzcw5hdarafmm
       autoprefixer: 10.4.13_postcss@8.4.21
+      clsx: 1.2.1
       eslint-config-custom: link:packages/eslint-config-custom
       husky: 8.0.3
       lint-staged: 13.1.1
@@ -57,6 +59,8 @@ importers:
       '@storybook/react': ^7.0.0-beta.46
       '@storybook/react-webpack5': ^7.0.0-beta.46
       '@storybook/testing-library': ^0.0.14-next.1
+      '@sudari/icons': workspace:*
+      '@sudari/ui': workspace:*
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
       react: ^18.2.0
@@ -68,7 +72,6 @@ importers:
       tsconfig: workspace:*
       twin.macro: ^3.1.0
       typescript: ^4.9.5
-      ui: workspace:*
     devDependencies:
       '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
       '@emotion/styled': 11.10.5_4erqsq3n444jecyuvaxwc5b3vi
@@ -81,6 +84,8 @@ importers:
       '@storybook/react': 7.0.0-beta.46_ygqkwb4gg3aean7xjfdauovyqq
       '@storybook/react-webpack5': 7.0.0-beta.46_o6p5qsvtzsumueuzp57uzhndem
       '@storybook/testing-library': 0.0.14-next.1
+      '@sudari/icons': link:../../packages/sudari-icons
+      '@sudari/ui': link:../../packages/sudari-ui
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       react: 18.2.0
@@ -92,7 +97,6 @@ importers:
       tsconfig: link:../../packages/tsconfig
       twin.macro: 3.1.0_tailwindcss@3.2.4
       typescript: 4.9.5
-      ui: link:../../packages/ui
 
   packages/eslint-config-custom:
     specifiers:
@@ -111,10 +115,7 @@ importers:
     devDependencies:
       typescript: 4.9.5
 
-  packages/tsconfig:
-    specifiers: {}
-
-  packages/ui:
+  packages/sudari-icons:
     specifiers:
       '@emotion/cache': ^11.10.5
       '@emotion/react': ^11.10.5
@@ -156,6 +157,56 @@ importers:
       rollup-plugin-terser: 7.0.2_rollup@3.14.0
       tsconfig: link:../tsconfig
       typescript: 4.9.5
+
+  packages/sudari-ui:
+    specifiers:
+      '@emotion/cache': ^11.10.5
+      '@emotion/react': ^11.10.5
+      '@emotion/styled': ^11.10.5
+      '@rollup/plugin-babel': ^6.0.3
+      '@rollup/plugin-commonjs': ^24.0.1
+      '@rollup/plugin-json': ^6.0.0
+      '@rollup/plugin-node-resolve': ^15.0.1
+      '@sudari/icons': workspace:*
+      '@types/react': ^18.0.27
+      babel-loader: ^9.1.2
+      babel-plugin-macros: ^3.1.0
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      react-merge-refs: ^2.0.1
+      rollup: ^3.14.0
+      rollup-plugin-commonjs: ^10.1.0
+      rollup-plugin-peer-deps-external: ^2.2.4
+      rollup-plugin-terser: ^7.0.2
+      tsconfig: workspace:*
+      typescript: ^4.9.5
+    dependencies:
+      '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
+      '@emotion/styled': 11.10.5_4erqsq3n444jecyuvaxwc5b3vi
+      '@types/react': 18.0.27
+      react: 18.2.0
+      react-merge-refs: 2.0.1
+    devDependencies:
+      '@emotion/cache': 11.10.5
+      '@rollup/plugin-babel': 6.0.3_55vfdocqwgqdto4ii6d2bdjw5q
+      '@rollup/plugin-commonjs': 24.0.1_rollup@3.14.0
+      '@rollup/plugin-json': 6.0.0_rollup@3.14.0
+      '@rollup/plugin-node-resolve': 15.0.1_rollup@3.14.0
+      '@sudari/icons': link:../sudari-icons
+      babel-loader: 9.1.2_la66t7xldg4uecmyawueag5wkm
+      babel-plugin-macros: 3.1.0
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      rollup: 3.14.0
+      rollup-plugin-commonjs: 10.1.0_rollup@3.14.0
+      rollup-plugin-peer-deps-external: 2.2.4_rollup@3.14.0
+      rollup-plugin-terser: 7.0.2_rollup@3.14.0
+      tsconfig: link:../tsconfig
+      typescript: 4.9.5
+
+  packages/tsconfig:
+    specifiers: {}
 
 packages:
 
@@ -4823,6 +4874,11 @@ packages:
       shallow-clone: 3.0.1
     dev: true
 
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: true
+
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
     dependencies:
@@ -8390,6 +8446,10 @@ packages:
   /react-is/18.1.0:
     resolution: {integrity: sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg==}
     dev: true
+
+  /react-merge-refs/2.0.1:
+    resolution: {integrity: sha512-pywF6oouJWuqL26xV3OruRSIqai31R9SdJX/I3gP2q8jLxUnA1IwXcLW8werUHLZOrp4N7YOeQNZrh/BKrHI4A==}
+    dev: false
 
   /react-refresh/0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}

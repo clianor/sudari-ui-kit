@@ -1,8 +1,9 @@
+import { ThemeProvider } from '@sudari/ui';
+
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import React from 'react';
 import 'twin.macro';
-import { ThemeProvider } from 'ui';
 
 const cache = createCache({ prepend: true, key: 'twin' });
 

@@ -1,18 +1,18 @@
-import * as React from 'react';
+import { ButtonHTMLAttributes, FC } from 'react';
 import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
 import { color, size, variant } from './type';
 
 export interface ButtonProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'value' | 'placeholder'> {
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value' | 'placeholder'> {
   variant?: variant;
   size?: size;
   color?: color;
   fullWidth?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ variant, size, color, fullWidth, ...rest }) => {
+export const Button: FC<ButtonProps> = ({ variant, size, color, fullWidth, ...props }) => {
   // init
   const { button } = useTheme();
   const { defaultProps, styles } = button;
@@ -24,6 +24,7 @@ export const Button: React.FC<ButtonProps> = ({ variant, size, color, fullWidth,
   color = color ?? defaultProps.color;
   fullWidth = fullWidth ?? defaultProps.fullWidth;
 
+  // set styles
   const baseStyles = base.initial;
   const fullWidthStyles = base.fullWidth;
   const buttonVariantStyles = variants[variant][color];
@@ -31,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({ variant, size, color, fullWidth,
 
   return (
     <button
-      {...rest}
+      {...props}
       css={[baseStyles, fullWidth && fullWidthStyles, buttonVariantStyles, buttonSizeStyle]}
     />
   );
