@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 
 const inputSrc = [
   ['./src/index.tsx', 'es'],
-  // ['./src/index.tsx', 'cjs'],
+  ['./src/index.tsx', 'cjs'],
 ];
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -17,8 +17,9 @@ export default inputSrc.map(([input, format]) => {
     output: {
       dir: `dist/${format}`,
       format,
-      exports: 'auto',
-      preserveModules: format === 'cjs',
+      exports: format === 'cjs' ? 'named' : 'auto',
+      preserveModules: format === 'es',
+      preserveModulesRoot: 'src',
     },
     plugins: [
       babel({
