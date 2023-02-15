@@ -26,7 +26,7 @@ export const IconButton: FC<IconButtonProps> = ({
   variant = variant ?? defaultProps.variant;
   size = size ?? defaultProps.size;
   color = color ?? defaultProps.color;
-  borderRadius = borderRadius ?? defaultProps.rounded;
+  borderRadius = borderRadius ?? defaultProps.borderRadius;
 
   // set styles
   const baseStyles = base.initial;
