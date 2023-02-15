@@ -7,6 +7,10 @@
   "sideEffects": false,
   "license": "MIT",
   "type": "module",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/es/index.js"
+  },
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "pnpm run type-check -- --watch",
