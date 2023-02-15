@@ -11,7 +11,7 @@
     "type-check:watch": "pnpm run type-check -- --watch",
     "build:types": "tsc",
     "build:rollup": "rollup -c",
-    "build": "pnpm run build:rollup && pnpm run build:types",
+    "build": "rimraf dist && pnpm run build:rollup && pnpm run build:types",
     "dev": "tsc -w | rollup -cw",
     "lint": "eslint src/**/*.ts*",
     "clean": "rimraf .turbo dist"
