@@ -1,12 +1,20 @@
 {
   "name": "@sudari/icons",
   "version": "0.0.0",
+  "homepage": "https://clianor.github.io/sudari-ui-kit/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clianor/sudari-ui-kit"
+  },
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
     "require": "./dist/cjs/index.js",
     "import": "./dist/es/index.js"
