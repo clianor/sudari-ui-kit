@@ -33,3 +33,27 @@ pnpm run dev
 - Refac: 기능 변화 없는 리팩토링
 - Test: 테스트 코드
 - Chore: 빌드 업무 수정, 패키지 매니저 수정, 기타 등등
+
+# 만들 컴포넌트
+
+## @sudari/ui
+
+- [x] Button
+- [x] IconButton
+- [x] Checkbox
+- [x]  Radio
+- [ ] Input
+- [ ] Textarea
+- [ ] Select
+- [ ] Switch
+- [ ] Dialog
+- [ ] Tooltip
+- [ ] Chip
+- [ ] Breadcrumbs
+- [ ] Tabs
+- [ ] ProgressBar
+- [ ] Popover
+- [ ] Dropdown
+- [ ] Avatar
+- [ ] Alert
+- [ ] Accordion
