@@ -4,7 +4,7 @@ export default {
   container: [],
   input: [
     tw`placeholder-transparent`,
-    tw`text-sm text-slate-700`,
+    tw`text-slate-700`,
     tw`border rounded-md border-slate-200`,
     tw`bg-transparent`,
     tw`px-3`,
@@ -16,9 +16,7 @@ export default {
   label: [
     tw`transition-all`,
     tw`-top-1.5`,
-    tw`peer-placeholder-shown:(text-sm leading-[3.25rem])`,
-    tw`text-xs text-slate-700`,
-    tw`peer-focus:(text-xs)`,
+    tw`text-slate-700`,
     // before
     tw`before:[content:' ']`,
     tw`before:(w-3 h-2 mt-1.5 mr-0.5)`,
