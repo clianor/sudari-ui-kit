@@ -1,6 +1,6 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["stories", "types"],
+  "include": ["stories", "types", ".eslintrc.js"],
   "exclude": ["storybook-static", "node_modules"],
   "compilerOptions": {
     "jsxImportSource": "@emotion/react"

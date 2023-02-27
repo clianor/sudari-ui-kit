@@ -7,7 +7,8 @@
     "dev": "storybook dev -p 6006",
     "build": "rimraf storybook-static && storybook build --docs",
     "preview": "serve storybook-static -l 6006",
-    "clean": "rimraf .turbo storybook-static node_modules"
+    "clean": "rimraf .turbo storybook-static node_modules",
+    "lint": "eslint stories/**/*.ts*"
   },
   "keywords": [],
   "author": "",
@@ -36,7 +37,8 @@
     "tsconfig": "workspace:*",
     "twin.macro": "^3.1.0",
     "typescript": "^4.9.5",
-    "@sudari/ui": "workspace:*"
+    "@sudari/ui": "workspace:*",
+    "eslint-config-custom": "workspace:*"
   },
   "babelMacros": {
     "twin": {

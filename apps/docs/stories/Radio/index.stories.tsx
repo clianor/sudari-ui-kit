@@ -3,7 +3,6 @@ import { theme } from '@sudari/ui';
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Fragment } from 'react';
-import 'twin.macro';
 
 import Radio from '.';
 
