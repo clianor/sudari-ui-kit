@@ -22,3 +22,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Default',
 };
+
+export const Variants: Story = {
+  name: 'Variants',
+  render: (args) => (
+    <div tw="flex flex-col gap-4">
+      <Input {...args} label="static" variant="static" />
+      <Input {...args} label="standard" variant="standard" />
+      <Input {...args} label="outlined" variant="outlined" />
+    </div>
+  ),
+};
