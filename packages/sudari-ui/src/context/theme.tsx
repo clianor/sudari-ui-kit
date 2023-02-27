@@ -11,14 +11,12 @@ interface ThemeProviderProps extends PropsWithChildren {
   value: typeof theme;
 }
 
-export const ThemeProvider = ({ value = theme, children }: ThemeProviderProps) => {
-  return (
-    <ThemeContext.Provider value={value}>
-      <GlobalStyles />
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+export const ThemeProvider = ({ value = theme, children }: ThemeProviderProps) => (
+  <ThemeContext.Provider value={value}>
+    <GlobalStyles />
+    {children}
+  </ThemeContext.Provider>
+);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);

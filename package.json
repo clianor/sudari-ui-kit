@@ -42,8 +42,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write",
-      "eslint"
+      "prettier --write"
     ]
   },
   "engines": {

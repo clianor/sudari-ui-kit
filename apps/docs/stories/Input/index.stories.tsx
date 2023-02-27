@@ -2,7 +2,6 @@ import { theme } from '@sudari/ui';
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Fragment } from 'react';
-import 'twin.macro';
 
 import Input from '.';
 
@@ -38,7 +37,7 @@ export const Variants: Story = {
 export const Sizes: Story = {
   name: 'Sizes',
   render: (args) => (
-    <div tw="grid grid-cols-3 gap-4">
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '2rem' }}>
       <Input {...args} label="Small" size="sm" variant="static" placeholder="placeholder" />
       <Input {...args} label="Small" size="sm" variant="standard" placeholder="placeholder" />
       <Input {...args} label="Small" size="sm" variant="outlined" placeholder="placeholder" />

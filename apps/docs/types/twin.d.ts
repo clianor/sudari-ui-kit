@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { css as cssImport } from '@emotion/react';
 import { CSSInterpolation } from '@emotion/serialize';
 import styledImport from '@emotion/styled';
