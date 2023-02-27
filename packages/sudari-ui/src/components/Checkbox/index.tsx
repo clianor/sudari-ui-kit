@@ -1,7 +1,15 @@
 import { CheckIcon, MinusIcon } from '@sudari/icons';
 
 import clsx from 'clsx';
-import { InputHTMLAttributes, ReactNode, forwardRef, useEffect, useRef } from 'react';
+import {
+  ChangeEvent,
+  InputHTMLAttributes,
+  ReactNode,
+  forwardRef,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react';
 import { mergeRefs } from 'react-merge-refs';
 import 'twin.macro';
 
@@ -18,7 +26,10 @@ export interface CheckboxProps
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ indeterminate, indeterminateIcon, size, color, disabled, icon, ...props }, ref) => {
+  (
+    { checked, indeterminate, indeterminateIcon, size, color, disabled, icon, onChange, ...props },
+    ref,
+  ) => {
     const localRef = useRef<HTMLInputElement>(null);
     // init
     const { checkbox } = useTheme();
@@ -37,6 +48,14 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const inputStyle = base.input;
     const iconStyle = base.icon[color];
 
+    const handleChange = useCallback(
+      (event: ChangeEvent<HTMLInputElement>) => {
+        if (indeterminate) event.currentTarget.indeterminate = indeterminate;
+        onChange?.(event);
+      },
+      [indeterminate, onChange],
+    );
+
     useEffect(() => {
       if (indeterminate && localRef.current) {
         localRef.current.indeterminate = true;
@@ -52,6 +71,8 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           className="peer"
           type="checkbox"
           disabled={disabled}
+          checked={indeterminate ? false : checked}
+          onChange={handleChange}
           css={[inputStyle]}
           {...props}
         />

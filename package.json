@@ -15,7 +15,8 @@
     "preview": "turbo run preview",
     "lint": "turbo run lint",
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "aicommits": "aicommits"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

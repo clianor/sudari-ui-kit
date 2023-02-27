@@ -18,7 +18,8 @@ export default inputSrc.map(([input, format]) => {
       dir: `dist/${format}`,
       format,
       exports: format === 'cjs' ? 'named' : 'auto',
-      preserveModules: format === 'cjs',
+      preserveModules: format === 'es',
+      preserveModulesRoot: 'src',
     },
     plugins: [
       babel({

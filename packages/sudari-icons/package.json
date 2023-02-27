@@ -1,19 +1,31 @@
 {
   "name": "@sudari/icons",
   "version": "0.0.0",
+  "homepage": "https://clianor.github.io/sudari-ui-kit/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clianor/sudari-ui-kit"
+  },
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/es/index.js"
+  },
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "pnpm run type-check -- --watch",
     "build:types": "tsc",
     "build:rollup": "rollup -c",
-    "build": "pnpm run build:rollup && pnpm run build:types",
-    "dev": "tsc -w | rollup -cw",
+    "build": "rimraf dist && pnpm run build:rollup && pnpm run build:types",
+    "dev": "rimraf dist && tsc -w | rollup -cw",
     "lint": "eslint src/**/*.ts*",
     "clean": "rimraf .turbo dist"
   },
