@@ -42,7 +42,7 @@ pnpm run dev
 - [x] IconButton
 - [x] Checkbox
 - [x] Radio
-- [ ] Input
+- [x] Input
 - [ ] Textarea
 - [ ] Select
 - [ ] Switch
