@@ -3,6 +3,7 @@ import tw from 'twin.macro';
 export default {
   container: [],
   input: [
+    tw`placeholder-transparent`,
     tw`text-sm text-slate-700`,
     tw`border rounded-md border-slate-200`,
     tw`bg-transparent`,

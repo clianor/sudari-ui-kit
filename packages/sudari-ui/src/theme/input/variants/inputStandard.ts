@@ -2,7 +2,7 @@ import tw from 'twin.macro';
 
 export default {
   container: [],
-  input: [tw`text-sm text-slate-700`],
+  input: [tw`placeholder-transparent`, tw`text-sm text-slate-700`],
   label: [
     tw`transition-all`,
     tw`-top-1.5`,

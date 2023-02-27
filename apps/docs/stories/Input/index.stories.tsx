@@ -27,9 +27,9 @@ export const Variants: Story = {
   name: 'Variants',
   render: (args) => (
     <div tw="flex flex-col gap-4">
-      <Input {...args} label="static" variant="static" />
-      <Input {...args} label="standard" variant="standard" />
-      <Input {...args} label="outlined" variant="outlined" />
+      <Input {...args} label="static" variant="static" placeholder="placeholder" />
+      <Input {...args} label="standard" variant="standard" placeholder="placeholder" />
+      <Input {...args} label="outlined" variant="outlined" placeholder="placeholder" />
     </div>
   ),
 };
