@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['next', 'turbo', 'airbnb', 'airbnb/hooks', 'airbnb-typescript', 'prettier'],
+  parser: '@typescript-eslint/parser',
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     '@typescript-eslint/naming-convention': 'off',
@@ -9,6 +10,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-fragments': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['tw', 'css'] }],
     'import/no-anonymous-default-export': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
