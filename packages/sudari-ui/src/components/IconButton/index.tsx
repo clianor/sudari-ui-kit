@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 
 import { useTheme } from '../../context/theme';
 import { ButtonProps } from '../Button';
-import { rounded } from './type';
+import type { rounded } from './type';
 
 export interface IconButtonProps extends Omit<ButtonProps, 'fullWidth' | 'children'> {
   icon?: ReactNode;

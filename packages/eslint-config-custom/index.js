@@ -10,9 +10,13 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-fragments': 'off',
+    'react/require-default-props': 'off',
+    'react/button-has-type': 'off',
     'react/no-unknown-property': ['error', { ignore: ['tw', 'css'] }],
     'import/no-anonymous-default-export': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-param-reassign': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
   },
 };

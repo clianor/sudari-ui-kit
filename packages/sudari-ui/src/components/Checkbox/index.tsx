@@ -14,7 +14,7 @@ import { mergeRefs } from 'react-merge-refs';
 import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
-import { color, size } from './type';
+import type { color, size } from './type';
 
 export interface CheckboxProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'size' | 'placeholder'> {

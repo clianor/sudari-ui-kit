@@ -1,7 +1,7 @@
 import { InputHTMLAttributes, forwardRef } from 'react';
 
 import { useTheme } from '../../context/theme';
-import { size, variant } from './type';
+import type { size, variant } from './type';
 
 export interface InputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'checked'> {

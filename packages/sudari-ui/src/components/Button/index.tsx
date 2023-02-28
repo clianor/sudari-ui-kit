@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import 'twin.macro';
 
 import { useTheme } from '../../context/theme';
-import { color, size, variant } from './type';
+import type { color, size, variant } from './type';
 
 export interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value' | 'placeholder'> {
