@@ -53,6 +53,20 @@ export const Sizes: Story = {
   ),
 };
 
+export const Colors: Story = {
+  name: 'Colors',
+  render: (args) => (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '2rem' }}>
+      <Input {...args} label="gray" placeholder="gray" color="gray" />
+      <Input {...args} label="yellow" placeholder="yellow" color="yellow" />
+      <Input {...args} label="green" placeholder="green" color="green" />
+      <Input {...args} label="blue" placeholder="blue" color="blue" />
+      <Input {...args} label="red" placeholder="red" color="red" />
+      <Input {...args} label="purple" placeholder="purple" color="purple" />
+    </div>
+  ),
+};
+
 export const Errors: Story = {
   name: 'Errors',
   render: (args) => (
