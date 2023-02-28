@@ -26,11 +26,11 @@ export const Default: Story = {
 export const Variants: Story = {
   name: 'Variants',
   render: (args) => (
-    <Fragment>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '2rem' }}>
       <Input {...args} label="static" variant="static" placeholder="placeholder" />
       <Input {...args} label="standard" variant="standard" placeholder="placeholder" />
       <Input {...args} label="outlined" variant="outlined" placeholder="placeholder" />
-    </Fragment>
+    </div>
   ),
 };
 
@@ -39,16 +39,27 @@ export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '2rem' }}>
       <Input {...args} label="Small" size="sm" variant="static" placeholder="placeholder" />
-      <Input {...args} label="Small" size="sm" variant="standard" placeholder="placeholder" />
-      <Input {...args} label="Small" size="sm" variant="outlined" placeholder="placeholder" />
-
       <Input {...args} label="Medium" size="md" variant="static" placeholder="placeholder" />
-      <Input {...args} label="Medium" size="md" variant="standard" placeholder="placeholder" />
-      <Input {...args} label="Medium" size="md" variant="outlined" placeholder="placeholder" />
-
       <Input {...args} label="Large" size="lg" variant="static" placeholder="placeholder" />
+
+      <Input {...args} label="Small" size="sm" variant="standard" placeholder="placeholder" />
+      <Input {...args} label="Medium" size="md" variant="standard" placeholder="placeholder" />
       <Input {...args} label="Large" size="lg" variant="standard" placeholder="placeholder" />
+
+      <Input {...args} label="Small" size="sm" variant="outlined" placeholder="placeholder" />
+      <Input {...args} label="Medium" size="md" variant="outlined" placeholder="placeholder" />
       <Input {...args} label="Large" size="lg" variant="outlined" placeholder="placeholder" />
+    </div>
+  ),
+};
+
+export const Errors: Story = {
+  name: 'Errors',
+  render: (args) => (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '2rem' }}>
+      <Input {...args} label="static" variant="static" placeholder="placeholder" error />
+      <Input {...args} label="standard" variant="standard" placeholder="placeholder" error />
+      <Input {...args} label="outlined" variant="outlined" placeholder="placeholder" error />
     </div>
   ),
 };

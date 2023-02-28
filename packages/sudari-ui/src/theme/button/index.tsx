@@ -18,7 +18,7 @@ export interface ButtonStyleTypes {
       initial: CSSInterpolation;
       fullWidth: CSSInterpolation;
     };
-    variants: { [key in variant]: { [key in color]: CSSInterpolation } };
+    variants: { [key in variant]: { [colorKey in color]: CSSInterpolation } };
     sizes: { [key in size]: CSSInterpolation };
   };
 }

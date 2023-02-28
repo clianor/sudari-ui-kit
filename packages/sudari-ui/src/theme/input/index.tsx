@@ -1,7 +1,7 @@
 import { CSSInterpolation } from '@emotion/serialize';
 import tw from 'twin.macro';
 
-import { size, variant } from '../../components/Input/type';
+import type { color, size, variant } from '../../components/Input/type';
 import inputOutlined from './variants/inputOutlined';
 import inputStandard from './variants/inputStandard';
 import inputStatic from './variants/inputStatic';
@@ -12,7 +12,9 @@ export interface InputStyleTypes {
   defaultProps: {
     placeholder: string;
     size: size;
+    color: color;
     variant: variant;
+    error: boolean;
   };
   styles: {
     base: {
@@ -20,13 +22,21 @@ export interface InputStyleTypes {
     };
     variants: {
       [key in variant]: {
-        [key in Elements]: CSSInterpolation;
+        [elementKey in Elements]: CSSInterpolation;
+      };
+    };
+    colors: {
+      [key in color]: {
+        [elementKey in Elements]: CSSInterpolation;
       };
     };
     sizes: {
       [key in size]: {
-        [key in Elements]: CSSInterpolation;
+        [elementKey in Elements]: CSSInterpolation;
       };
+    };
+    errors: {
+      [key in Elements]: CSSInterpolation;
     };
   };
 }
@@ -35,11 +45,13 @@ const input: InputStyleTypes = {
   defaultProps: {
     placeholder: ' ',
     size: 'md',
+    color: 'green',
     variant: 'outlined',
+    error: false,
   },
   styles: {
     base: {
-      container: tw`relative w-full min-w-[200px]`,
+      container: [tw`relative`, tw`w-full min-w-[200px]`],
       input: [
         tw`w-full h-full`,
         tw`m-0`,
@@ -58,6 +70,38 @@ const input: InputStyleTypes = {
       outlined: inputOutlined,
       standard: inputStandard,
       static: inputStatic,
+    },
+    colors: {
+      gray: {
+        container: [],
+        input: [tw`focus:(border-gray-500 border-t-transparent)`],
+        label: [tw`peer-focus:(border-gray-500 text-gray-500)`],
+      },
+      yellow: {
+        container: [],
+        input: [tw`focus:(border-yellow-500 border-t-transparent)`],
+        label: [tw`peer-focus:(border-yellow-500 text-yellow-500)`],
+      },
+      green: {
+        container: [],
+        input: [tw`focus:(border-green-500 border-t-transparent)`],
+        label: [tw`peer-focus:(border-green-500 text-green-500)`],
+      },
+      blue: {
+        container: [],
+        input: [tw`focus:(border-blue-500 border-t-transparent)`],
+        label: [tw`peer-focus:(border-blue-500 text-blue-500)`],
+      },
+      red: {
+        container: [],
+        input: [tw`focus:(border-red-500 border-t-transparent)`],
+        label: [tw`peer-focus:(border-red-500 text-red-500)`],
+      },
+      purple: {
+        container: [],
+        input: [tw`focus:(border-purple-500 border-t-transparent)`],
+        label: [tw`peer-focus:(border-purple-500 text-purple-500)`],
+      },
     },
     sizes: {
       sm: {
@@ -87,6 +131,11 @@ const input: InputStyleTypes = {
           tw`peer-focus:(text-base leading-[1rem])`,
         ],
       },
+    },
+    errors: {
+      container: [tw`text-red-500 border-red-500`],
+      input: [tw`focus:(border-red-500 border-t-transparent)`],
+      label: [tw`peer-focus:(border-red-500 text-red-500)`],
     },
   },
 };
