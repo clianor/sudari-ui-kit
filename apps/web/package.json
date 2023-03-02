@@ -1,0 +1,38 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "18.14.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "next": "13.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "twin.macro": "^3.1.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@sudari/ui": "workspace:*",
+    "typescript": "^4.9.5"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./../../tailwind.config.js",
+      "preset": "emotion"
+    }
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    }
+  }
+}
