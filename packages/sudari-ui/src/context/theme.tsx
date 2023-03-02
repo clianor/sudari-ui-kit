@@ -8,7 +8,7 @@ export const ThemeContext = createContext<typeof theme | null>(null);
 export const ThemeConsumer = ThemeContext.Consumer;
 
 interface ThemeProviderProps extends PropsWithChildren {
-  value: typeof theme;
+  value?: typeof theme;
 }
 
 export const ThemeProvider = ({ value = theme, children }: ThemeProviderProps) => (
