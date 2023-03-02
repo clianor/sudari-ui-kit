@@ -13,18 +13,17 @@ export interface InputProps
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, placeholder, variant, size, color, label, error, ...props }, ref) => {
+  ({ className, placeholder, variant, size, color, label, disabled, error, ...props }, ref) => {
     // init
     const { input } = useTheme();
     const { defaultProps, styles } = input;
-    const { base, variants, colors, sizes, errors } = styles;
+    const { base, variants, colors, sizes, disables, errors } = styles;
 
     // set default props
     placeholder = placeholder ?? defaultProps.placeholder;
     size = size ?? defaultProps.size;
     color = color ?? defaultProps.color;
     variant = variant ?? defaultProps.variant;
-    error = error ?? defaultProps.error;
 
     // set styles
     const containerStyle = [
@@ -32,6 +31,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       sizes[size].container,
       variants[variant].container,
       colors[color].container,
+      disabled && disables.container,
       error && errors.container,
     ];
     const inputStyle = [
@@ -39,6 +39,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       sizes[size].input,
       variants[variant].input,
       colors[color].input,
+      disabled && disables.input,
       error && errors.input,
     ];
     const labelStyle = [
@@ -46,12 +47,20 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       sizes[size].label,
       variants[variant].label,
       colors[color].label,
+      disabled && disables.label,
       error && errors.label,
     ];
 
     return (
       <div className={className} css={containerStyle}>
-        <input {...props} ref={ref} className="peer" placeholder={placeholder} css={inputStyle} />
+        <input
+          {...props}
+          ref={ref}
+          className="peer"
+          placeholder={placeholder}
+          disabled={disabled}
+          css={inputStyle}
+        />
         <label css={labelStyle}>{label}</label>
       </div>
     );

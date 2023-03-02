@@ -14,7 +14,6 @@ export interface InputStyleTypes {
     size: size;
     color: color;
     variant: variant;
-    error: boolean;
   };
   styles: {
     base: {
@@ -35,6 +34,9 @@ export interface InputStyleTypes {
         [elementKey in Elements]: CSSInterpolation;
       };
     };
+    disables: {
+      [key in Elements]: CSSInterpolation;
+    };
     errors: {
       [key in Elements]: CSSInterpolation;
     };
@@ -47,7 +49,6 @@ const input: InputStyleTypes = {
     size: 'md',
     color: 'green',
     variant: 'outlined',
-    error: false,
   },
   styles: {
     base: {
@@ -132,9 +133,14 @@ const input: InputStyleTypes = {
         ],
       },
     },
+    disables: {
+      container: [tw`opacity-60`],
+      input: [tw`disabled:(border-0 bg-slate-50)`],
+      label: [tw`peer-disabled:before:border-0`, tw`peer-disabled:after:border-0`],
+    },
     errors: {
       container: [tw`text-red-500 border-red-500`],
-      input: [tw`focus:(border-red-500 border-t-transparent)`],
+      input: [tw`border`, tw`focus:(border-red-500 border-t-transparent)`],
       label: [tw`peer-focus:(border-red-500 text-red-500)`],
     },
   },

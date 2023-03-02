@@ -1,7 +1,6 @@
 import { theme } from '@sudari/ui';
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { Fragment } from 'react';
 
 import Input from '.';
 
@@ -9,7 +8,9 @@ const meta: Meta<typeof Input> = {
   title: '@sudari/ui/Input',
   component: Input,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    value: { control: 'text' },
+  },
   args: {
     ...theme.input.defaultProps,
     label: 'Label',
@@ -74,6 +75,70 @@ export const Errors: Story = {
       <Input {...args} label="static" variant="static" placeholder="placeholder" error />
       <Input {...args} label="standard" variant="standard" placeholder="placeholder" error />
       <Input {...args} label="outlined" variant="outlined" placeholder="placeholder" error />
+    </div>
+  ),
+};
+
+export const Disabled: Story = {
+  name: 'Disabled',
+  render: (args) => (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '2rem' }}>
+      <Input {...args} label="static" variant="static" placeholder="placeholder" disabled />
+      <Input {...args} label="standard" variant="standard" placeholder="placeholder" disabled />
+      <Input {...args} label="outlined" variant="outlined" placeholder="placeholder" disabled />
+
+      <Input
+        {...args}
+        label="static"
+        variant="static"
+        placeholder="placeholder"
+        value="Static"
+        disabled
+      />
+      <Input
+        {...args}
+        label="standard"
+        variant="standard"
+        placeholder="placeholder"
+        value="Standard"
+        disabled
+      />
+      <Input
+        {...args}
+        label="outlined"
+        variant="outlined"
+        placeholder="placeholder"
+        value="Outlined"
+        disabled
+      />
+
+      <Input
+        {...args}
+        label="static"
+        variant="static"
+        placeholder="placeholder"
+        value="Static"
+        disabled
+        error
+      />
+      <Input
+        {...args}
+        label="standard"
+        variant="standard"
+        placeholder="placeholder"
+        value="Standard"
+        disabled
+        error
+      />
+      <Input
+        {...args}
+        label="outlined"
+        variant="outlined"
+        placeholder="placeholder"
+        value="Outlined"
+        disabled
+        error
+      />
     </div>
   ),
 };

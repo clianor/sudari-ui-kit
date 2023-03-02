@@ -11,7 +11,6 @@ export default {
     tw`border-t-transparent`,
     tw`placeholder-shown:border-inherit`,
     tw`focus:(border-inherit border-2 border-t-transparent)`,
-    tw`disabled:(border-0 bg-slate-50)`,
   ],
   label: [
     tw`transition-all`,
