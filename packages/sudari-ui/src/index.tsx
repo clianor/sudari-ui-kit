@@ -4,6 +4,7 @@ export * from './components/Checkbox';
 export * from './components/IconButton';
 export * from './components/Input';
 export * from './components/Radio';
+export * from './components/Tooltip';
 
 // context
 export * from './context/theme';

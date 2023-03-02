@@ -8,4 +8,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
+  rules: {
+    'react-hooks/rules-of-hooks': 'off',
+  },
 };

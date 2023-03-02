@@ -43,11 +43,11 @@ pnpm run dev
 - [x] Checkbox
 - [x] Radio
 - [x] Input
+- [x] Tooltip
 - [ ] Textarea
 - [ ] Select
 - [ ] Switch
 - [ ] Dialog
-- [ ] Tooltip
 - [ ] Chip
 - [ ] Breadcrumbs
 - [ ] Tabs
