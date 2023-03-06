@@ -1,11 +1,10 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["src", ".eslintrc.js"],
+  "include": ["src", ".eslintrc.js", "rollup.config.js"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "dist/types",
     "emitDeclarationOnly": true,
-    "jsxImportSource": "@emotion/react"
   }
 }

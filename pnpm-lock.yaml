@@ -136,9 +136,6 @@ importers:
 
   packages/sudari-icons:
     specifiers:
-      '@emotion/cache': ^11.10.5
-      '@emotion/react': ^11.10.5
-      '@emotion/styled': ^11.10.5
       '@rollup/plugin-babel': ^6.0.3
       '@rollup/plugin-commonjs': ^24.0.1
       '@rollup/plugin-json': ^6.0.0
@@ -155,12 +152,9 @@ importers:
       tsconfig: workspace:*
       typescript: ^4.9.5
     dependencies:
-      '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
-      '@emotion/styled': 11.10.5_4erqsq3n444jecyuvaxwc5b3vi
       '@types/react': 18.0.27
       react: 18.2.0
     devDependencies:
-      '@emotion/cache': 11.10.5
       '@rollup/plugin-babel': 6.0.3_55vfdocqwgqdto4ii6d2bdjw5q
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.14.0
       '@rollup/plugin-json': 6.0.0_rollup@3.14.0
@@ -206,7 +200,7 @@ importers:
     dependencies:
       '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
       '@emotion/styled': 11.10.5_4erqsq3n444jecyuvaxwc5b3vi
-      '@floating-ui/react': 0.20.1_biqbaboplfbrettd7655fr4n2y
+      '@floating-ui/react': 0.20.1_5ndqzdd6t4rivxsukjv3i3ak2q
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       framer-motion: 10.0.1_biqbaboplfbrettd7655fr4n2y
@@ -2022,14 +2016,14 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@floating-ui/react/0.20.1_biqbaboplfbrettd7655fr4n2y:
+  /@floating-ui/react/0.20.1_5ndqzdd6t4rivxsukjv3i3ak2q:
     resolution: {integrity: sha512-JHTHJ+/YsIxNFH8uJDFa5OyI6dSUZcle6wAFe0zRTjgWD+rkACfBBoJtx2itTtn7C4a7xAz4jgxdEQcMel194g==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       '@floating-ui/react-dom': 1.3.0_biqbaboplfbrettd7655fr4n2y
-      aria-hidden: 1.2.2_react@18.2.0
+      aria-hidden: 1.2.2_3stiutgnnbnfnf3uowm5cip22i
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tabbable: 6.1.1
@@ -2851,12 +2845,12 @@ packages:
       telejson: 7.0.4
     dev: true
 
-  /@storybook/channel-postmessage/7.0.0-beta.59:
-    resolution: {integrity: sha512-TVvUBJpaxfmF9ap4lbA76ez4EJUM8BO4tpXn2w4tcs0HZUUFmCaltcUVk+KJLE2ZcQpDFNhXtR9nk1DPJtHy9A==}
+  /@storybook/channel-postmessage/7.0.0-beta.61:
+    resolution: {integrity: sha512-hQPtbYkCftWMYni4Y0M/tfR/2LskAAMR2+4vY7LUjjZFMmjypxUuJ3TVEsq6FgpOzYU/CxVgt5yU3b7I0Onprg==}
     dependencies:
-      '@storybook/channels': 7.0.0-beta.59
-      '@storybook/client-logger': 7.0.0-beta.59
-      '@storybook/core-events': 7.0.0-beta.59
+      '@storybook/channels': 7.0.0-beta.61
+      '@storybook/client-logger': 7.0.0-beta.61
+      '@storybook/core-events': 7.0.0-beta.61
       '@storybook/global': 5.0.0
       qs: 6.11.0
       telejson: 7.0.4
@@ -2879,8 +2873,8 @@ packages:
     resolution: {integrity: sha512-fNsUiWe+K+jnHyeG1WrUrJDGHmO/QLOek0Ly+5j2LhV7PG4S/33IUVShux4yfZIMJwtrVtaawM306q1uJofFaw==}
     dev: true
 
-  /@storybook/channels/7.0.0-beta.59:
-    resolution: {integrity: sha512-dd0kHUfIM8oolqMq2R9/YcN5+NPq9hQz8upnAsiJZ++TrJyarBUAGaR5njC8gVhFKouxyUZsltVZ3X/9T1BIsg==}
+  /@storybook/channels/7.0.0-beta.61:
+    resolution: {integrity: sha512-I4o7xsTcMElDi3R5Xr0f88cTQoejBppVSDGx5spdZUfVGt/zO07qg3epaaS7r59YYXHY40p9fR+LLJz0kQ7LtQ==}
     dev: true
 
   /@storybook/cli/7.0.0-beta.43:
@@ -2950,8 +2944,8 @@ packages:
       '@storybook/global': 5.0.0
     dev: true
 
-  /@storybook/client-logger/7.0.0-beta.59:
-    resolution: {integrity: sha512-xEl+RNAsMZ+AvdatVd8GVzIvH6Dm4kaIXs3iyCRr4HXIdAxNB53tReqDDdzsK4LamMf5003Mlo4Szcb4QTkskQ==}
+  /@storybook/client-logger/7.0.0-beta.61:
+    resolution: {integrity: sha512-uvH7oPEeQXFV3IThHkV3UbkPXnCUKE+Kk0SV9zMJe2DK3eC/K/8g3TqafOXOSS6LOWuZojm6Bk/Kmpn7ZpxcSw==}
     dependencies:
       '@storybook/global': 5.0.0
     dev: true
@@ -3077,8 +3071,8 @@ packages:
     resolution: {integrity: sha512-ogC+bHeMsmpZuEiKWCUdgncATgDsnPTDqumgV99fXDWrYpt2KUePsZSBSTaI97lTZqko3WN1GTBbqqZ0OrerHw==}
     dev: true
 
-  /@storybook/core-events/7.0.0-beta.59:
-    resolution: {integrity: sha512-kmCui9J/u70m4dMaj8ZfqXwgbdPr5stYBTmwdB3sbiFDH4YJpI1QC4pYQdN7vQLMuLF6IDsVhNlJro/aeuwBEg==}
+  /@storybook/core-events/7.0.0-beta.61:
+    resolution: {integrity: sha512-OG9j6WWXNoQHIDvbDyOIu0YwSItiboecn2vG0inV7geVihaiLVF2nGT65BjNQ/NeRi0jY0CwW9mt4zwwY6DgWA==}
     dev: true
 
   /@storybook/core-server/7.0.0-beta.43:
@@ -3226,21 +3220,21 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/instrumenter/7.0.0-beta.59:
-    resolution: {integrity: sha512-leJITQHx97ZViM75mVrWwHIlX25tSMkklCq0bzEQ7R8YWNP0KaKkNlCzX0yh5k6W5gjBeI8sSilGpXmrcHA0QA==}
+  /@storybook/instrumenter/7.0.0-beta.61:
+    resolution: {integrity: sha512-GpKJE6TnY+gYoI/Wy/Lm87UsEuVNyVY78XcbV56Sr1Jj33qq9WbO/lxZp1kTAOBpPkLZAKLE8bEc4YhHoWHESQ==}
     dependencies:
-      '@storybook/channels': 7.0.0-beta.59
-      '@storybook/client-logger': 7.0.0-beta.59
-      '@storybook/core-events': 7.0.0-beta.59
+      '@storybook/channels': 7.0.0-beta.61
+      '@storybook/client-logger': 7.0.0-beta.61
+      '@storybook/core-events': 7.0.0-beta.61
       '@storybook/global': 5.0.0
-      '@storybook/preview-api': 7.0.0-beta.59
+      '@storybook/preview-api': 7.0.0-beta.61
     dev: true
 
   /@storybook/jest/0.0.11-next.0:
     resolution: {integrity: sha512-jtCu2rmDNhG+VxB/sR+AADhb6c/UNdqAmHYV3B50tc+HlnrlELE3UEsRFCztlq4zFaz1y3JK91lwQn9ja6yPsQ==}
     dependencies:
       '@storybook/expect': 27.5.2-0
-      '@storybook/instrumenter': 7.0.0-beta.59
+      '@storybook/instrumenter': 7.0.0-beta.61
       '@testing-library/jest-dom': 5.16.5
       jest-mock: 27.5.1
     dev: true
@@ -3393,16 +3387,16 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/preview-api/7.0.0-beta.59:
-    resolution: {integrity: sha512-ZRTStJ57wi/ovN0Y1OXp5Ap9WJ5KDDNfmk8cCVgyyPZ1QrwqnrTkHwbLl+DlmFYMJBAiF0s2Rfvcm70hQfJK8Q==}
+  /@storybook/preview-api/7.0.0-beta.61:
+    resolution: {integrity: sha512-I/zBjKRBof8cwRRRFX0UAu7X4icV20zgvV/PqghijRepI7Xpjed8MEgxgZhpaO4rup+nukMhMeCsvH/vxpbPEg==}
     dependencies:
-      '@storybook/channel-postmessage': 7.0.0-beta.59
-      '@storybook/channels': 7.0.0-beta.59
-      '@storybook/client-logger': 7.0.0-beta.59
-      '@storybook/core-events': 7.0.0-beta.59
+      '@storybook/channel-postmessage': 7.0.0-beta.61
+      '@storybook/channels': 7.0.0-beta.61
+      '@storybook/client-logger': 7.0.0-beta.61
+      '@storybook/core-events': 7.0.0-beta.61
       '@storybook/csf': 0.0.2-next.10
       '@storybook/global': 5.0.0
-      '@storybook/types': 7.0.0-beta.59
+      '@storybook/types': 7.0.0-beta.61
       '@types/qs': 6.9.7
       dequal: 2.0.3
       lodash: 4.17.21
@@ -3555,8 +3549,8 @@ packages:
   /@storybook/testing-library/0.0.14-next.1:
     resolution: {integrity: sha512-1CAl40IKIhcPaCC4pYCG0b9IiYNymktfV/jTrX7ctquRY3akaN7f4A1SippVHosksft0M+rQTFE0ccfWW581fw==}
     dependencies:
-      '@storybook/client-logger': 7.0.0-beta.59
-      '@storybook/instrumenter': 7.0.0-beta.59
+      '@storybook/client-logger': 7.0.0-beta.61
+      '@storybook/instrumenter': 7.0.0-beta.61
       '@testing-library/dom': 8.20.0
       '@testing-library/user-event': 13.5.0_yxlyej73nftwmh2fiao7paxmlm
       ts-dedent: 2.2.0
@@ -3602,10 +3596,10 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/types/7.0.0-beta.59:
-    resolution: {integrity: sha512-vDhf84KeE8zUmy1LGZLdhrrLCLTTh2Fd8ddSJs8M94PfiToPcawf0KMzaE8yPY9JHl0CtubvjPVDX6xw4v0oAw==}
+  /@storybook/types/7.0.0-beta.61:
+    resolution: {integrity: sha512-8kJSoP7ZPfdQZ9e0WvBfxYQupfafrEYFybh4kTzTHsylfIXpcrnEgVqh6JeRI+IbLvAM6PIASGCcg9GJcUiIhA==}
     dependencies:
-      '@storybook/channels': 7.0.0-beta.59
+      '@storybook/channels': 7.0.0-beta.61
       '@types/babel__core': 7.20.0
       '@types/express': 4.17.17
       file-system-cache: 2.0.2
@@ -4497,7 +4491,7 @@ packages:
     dependencies:
       sprintf-js: 1.0.3
 
-  /aria-hidden/1.2.2_react@18.2.0:
+  /aria-hidden/1.2.2_3stiutgnnbnfnf3uowm5cip22i:
     resolution: {integrity: sha512-6y/ogyDTk/7YAe91T3E2PR1ALVKyM2QbTio5HwM+N1Q6CMlCKhvClyIjkckBswa0f2xJhjsfzIGa1yVSe1UMVA==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -4507,6 +4501,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
+      '@types/react': 18.0.27
       react: 18.2.0
       tslib: 2.5.0
     dev: false

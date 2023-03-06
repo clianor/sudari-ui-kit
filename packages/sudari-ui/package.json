@@ -11,7 +11,7 @@
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "files": [
     "dist"
   ],

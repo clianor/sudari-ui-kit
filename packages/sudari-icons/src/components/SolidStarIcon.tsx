@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { IconType } from '../types/iconType';
+
 export const SolidStarIcon: FC<IconType> = (props) => (
   <svg
     clipRule="evenodd"
