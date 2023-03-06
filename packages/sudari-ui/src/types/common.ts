@@ -1,5 +1,6 @@
 import type { UseDismissProps } from '@floating-ui/react';
 
+// TODO: Add inherit color type
 export type colors = 'white' | 'gray' | 'yellow' | 'green' | 'blue' | 'red' | 'purple';
 
 export type offset =
